@@ -1,4 +1,4 @@
-
+import vue from '@vitejs/plugin-vue'
 
 export default {
     build: {
@@ -23,4 +23,8 @@ export default {
         port: 3000,
         strictPort: true,
     },
+    plugins: [
+        vue()
+    ],
+
 }
