@@ -45,11 +45,6 @@
                         <li class="list-none w-full">
                             <button class="px-4 w-full relative py-3 rounded-lg bg-green-700 bg-opacity-50 scale-100 transition-all cursor-pointer active:scale-95 hover:bg-opacity-40 flex items-center justify-between">
                                 <p class="lg:text-base !m-0 p-0" v-text="item.title"></p>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                                </svg>
                             </button>
                         </li>
                     </template>

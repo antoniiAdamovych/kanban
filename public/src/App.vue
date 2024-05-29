@@ -1,23 +1,15 @@
 <template>
-    <div class="reveal">
+    <div class="reveal !hidden lg:!block">
         <div class="slides">
             <Slide1 />
             <Slide2 />
             <Slide3 />
+            <Slide4 />
+            <Slide5 />
+            <Slide6 />
         </div>
     </div>
-    <div
-        :class="isToastActive ? 'opacity-100' : 'opacity-0'"
-        class="toast fixed z-50 bottom-4 left-4 px-4 py-2 border text-white rounded-sm transition-opacity duration-300">
-        <div class="toast__content flex items-center gap-4">
-            <p>Press Enter to open fullscreen mode</p>
-            <button @click="isToastActive = false" id="toast_close"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-            </button>
-        </div>
-    </div>
+    <p class="lg:hidden text-5xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-max text-white">Nutze den Laptop!</p>
 </template>
 
 <script setup lang="ts">
@@ -30,8 +22,9 @@ import { onMounted, ref } from 'vue';
 import Slide1 from './slides/Slide1.vue';
 import Slide2 from './slides/Slide2.vue';
 import Slide3 from './slides/Slide3.vue';
-
-const isToastActive = ref(true);
+import Slide4 from './slides/Slide4.vue';
+import Slide5 from './slides/Slide5.vue';
+import Slide6 from './slides/Slide6.vue';
 
 onMounted(() => {
     // @ts-ignore
@@ -58,10 +51,6 @@ onMounted(() => {
     })
 
     KeyEvents();
-
-    setTimeout(() => {
-        isToastActive.value = false;
-    }, 3000);
 })
 
 function KeyEvents() {
