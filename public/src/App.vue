@@ -9,6 +9,7 @@
             <Ticket />
             <Comparing />
             <Custom />
+            <Efficiency />
         </div>
     </div>
     <p class="lg:hidden text-5xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-max text-white">Nutze den Laptop!</p>
@@ -30,6 +31,8 @@ import Custom from './slides/Custom.vue';
 
 import Agile from './slides/Agile.vue';
 import ClassicAgile from './slides/Classic-Agile.vue';
+
+import Efficiency from './slides/Efficiency.vue';
 
 onMounted(() => {
     // @ts-ignore
