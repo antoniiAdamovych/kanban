@@ -1,12 +1,14 @@
 <template>
     <div class="reveal !hidden lg:!block">
         <div class="slides">
-            <Slide1 />
-            <Slide2 />
-            <Slide3 />
-            <Slide4 />
-            <Slide5 />
-            <Slide6 />
+            <Intro />
+            <Agile />
+            <ClassicAgile />
+            <Kanban />
+            <Tickets />
+            <Ticket />
+            <Comparing />
+            <Custom />
         </div>
     </div>
     <p class="lg:hidden text-5xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-max text-white">Nutze den Laptop!</p>
@@ -19,12 +21,15 @@ import client from './store/presentation';
 
 import { onMounted, ref } from 'vue';
 
-import Slide1 from './slides/Slide1.vue';
-import Slide2 from './slides/Slide2.vue';
-import Slide3 from './slides/Slide3.vue';
-import Slide4 from './slides/Slide4.vue';
-import Slide5 from './slides/Slide5.vue';
-import Slide6 from './slides/Slide6.vue';
+import Intro from './slides/Intro.vue';
+import Kanban from './slides/Kanban.vue';
+import Tickets from './slides/Tickets.vue';
+import Ticket from './slides/Ticket.vue';
+import Comparing from './slides/Comparing.vue';
+import Custom from './slides/Custom.vue';
+
+import Agile from './slides/Agile.vue';
+import ClassicAgile from './slides/Classic-Agile.vue';
 
 onMounted(() => {
     // @ts-ignore
