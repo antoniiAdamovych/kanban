@@ -10,8 +10,10 @@
             <Comparing />
             <Custom />
             <Efficiency />
+            <End />
         </div>
     </div>
+    <a target="_blank" class="!w-8 aspect-square !absolute top-8 right-8" href="https://github.com/antoniiAdamovych/kanban"><img class="w-full h-full" src="/assets/github-mark.svg" alt=""></a>
     <p class="lg:hidden text-5xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-max text-white">Nutze den Laptop!</p>
 </template>
 
@@ -33,6 +35,8 @@ import Agile from './slides/Agile.vue';
 import ClassicAgile from './slides/Classic-Agile.vue';
 
 import Efficiency from './slides/Efficiency.vue';
+
+import End from './slides/End.vue';
 
 onMounted(() => {
     // @ts-ignore
