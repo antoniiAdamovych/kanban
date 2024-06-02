@@ -12,6 +12,7 @@
   "dependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
     "reveal.js": "^5.1.0",
+    "swiper": "^11.1.4",
     "vite": "^5.2.11",
     "vue": "^3.4.27"
   },
