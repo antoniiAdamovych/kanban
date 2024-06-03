@@ -3,7 +3,8 @@
         "lib": ["ES2017", "dom"],
         "paths": {
             "@/*": ["./public/*"],
-        }
+        },
+        "resolveJsonModule": true,
     },
     "include": [
         "public/**/*.ts",

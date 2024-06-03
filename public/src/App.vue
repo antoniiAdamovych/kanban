@@ -11,6 +11,7 @@
             <Custom />
             <Efficiency />
             <End />
+            <Quiz />
         </div>
     </div>
     <a target="_blank" class="!w-8 aspect-square !absolute top-8 right-8" href="https://github.com/antoniiAdamovych/kanban"><img class="w-full h-full" src="/assets/github-mark.svg" alt=""></a>
@@ -35,6 +36,7 @@ import Agile from './slides/Agile.vue';
 import ClassicAgile from './slides/Classic-Agile.vue';
 
 import Efficiency from './slides/Efficiency.vue';
+import Quiz from './slides/Quiz.vue';
 
 import End from './slides/End.vue';
 
@@ -45,6 +47,10 @@ onMounted(() => {
     Reveal.on('slidechanged', (event) => {
         client.value.fragmentBeginn = true;
         client.value.activeSlide = event.indexh;
+
+        const confetti = document.querySelector('.confetti-container');
+
+        if(confetti) confetti.remove();
     });
     // @ts-ignore
     Reveal.on('fragmentshown', event => {
