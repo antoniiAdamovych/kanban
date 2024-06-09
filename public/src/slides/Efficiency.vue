@@ -8,6 +8,9 @@
             <div class="w-full">
                 <Swiper :modules="modules">
                     <SwiperSlide>
+                        <img class="w-full !max-h-[500px] object-contain" src="/assets/checkbox.png" alt="">
+                    </SwiperSlide>
+                    <SwiperSlide>
                         <img class="w-full rounded-lg mx-auto" src="/assets/empty.png" alt="">
                     </SwiperSlide>
                     <SwiperSlide>

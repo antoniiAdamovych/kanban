@@ -54,7 +54,6 @@ onMounted(() => {
     });
     // @ts-ignore
     Reveal.on('fragmentshown', event => {
-        console.log("changed")
         client.value.fragmentBeginn = false;
         client.value.activeFragment = event.fragment.getAttribute('data-fragment-index');
     });

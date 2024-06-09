@@ -1,4 +1,5 @@
 import vue from '@vitejs/plugin-vue'
+import mix from 'vite-plugin-mix'
 
 export default {
     build: {
@@ -24,7 +25,10 @@ export default {
         strictPort: true,
     },
     plugins: [
-        vue()
+        vue(),
+        mix({
+            handler: './api.ts',
+        }),
     ],
 
 }
