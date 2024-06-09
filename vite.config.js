@@ -1,5 +1,4 @@
 import vue from '@vitejs/plugin-vue'
-import mix from 'vite-plugin-mix'
 
 export default {
     build: {
