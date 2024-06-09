@@ -25,10 +25,7 @@ export default {
         strictPort: true,
     },
     plugins: [
-        vue(),
-        mix({
-            handler: './api.ts',
-        }),
+        vue()
     ],
 
 }
