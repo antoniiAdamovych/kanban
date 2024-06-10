@@ -4,7 +4,7 @@
             Was ist <span class="text-purple-600">Kanban</span></h2>
         <ul style="--gap: 1.5rem;" class="!flex items-start flex-wrap w-full px-20 gap-[var(--gap)] ">
             <li class="fragment w-full lg:w-[calc(50%_-_var(--gap))] lg:list-none">
-                <p class="lg:text-base">Kanban bedeutet auf Japanisch „Signal” und „Karte”.</p>
+                <p class="lg:text-base">Kanban bedeutet auf Japanisch „Karte” und „Tafel”.</p>
             </li>
             <li class="fragment w-full lg:w-[calc(50%_-_var(--gap))] lg:list-none bg-purple-900 px-4 rounded-lg">
                 <p class="lg:text-base">Entwickelt in den 1940er Jahren von Toyota.</p>
