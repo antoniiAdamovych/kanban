@@ -1,6 +1,6 @@
-import data from './data.js'
+import data from './data.mjs'
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req, res) {
     const body = await req.json()
     if(!body) {
         return new Response('body is missing', {

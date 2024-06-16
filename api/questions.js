@@ -1,6 +1,6 @@
-import data from './data.js'
+import data from './data.mjs'
 
-export function GET(request: Request, res: Response) {
+export function GET(request, res) {
     console.log("test")
 
     const questions = data.questions.map(q => {
