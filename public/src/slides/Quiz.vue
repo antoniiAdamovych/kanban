@@ -21,8 +21,15 @@
                         </div>
                     </template>
                 </div>
-                <button @click="HandleAnswer" :disabled="!currentQuestion.selected"
-                    class="disabled:opacity-60 disabled:cursor-not-allowed w-max mt-6 mx-auto bg-gray-800 bg-opacity-50 border border-gray-800 px-4 py-2 text-base rounded-lg">Absenden</button>
+                <button @click="HandleAnswer" :disabled="!currentQuestion.selected || loading"
+                    class="disabled:opacity-60 disabled:cursor-not-allowed w-max mt-6 mx-auto bg-gray-800 bg-opacity-50 border border-gray-800 px-4 py-2 text-base rounded-lg">
+                    <template v-if="loading">
+                        <Load />
+                    </template>
+                    <template v-else>
+                        Absenden
+                    </template>
+                </button>
             </div>
             <div v-else class="h-[400px] grid place-content-center">
                 <h2>Ergebnis</h2>
@@ -35,6 +42,7 @@
 
 <script setup lang="ts">
 
+import Load from '../assets/load.vue' 
 import { poof } from '../../animation';
 import { ref, onMounted } from 'vue';
 
@@ -42,6 +50,8 @@ const started = ref(false);
 const activeQuestion = ref(0);
 
 const section = ref<null | HTMLElement>(null);
+
+const loading = ref(false)
 
 const currentQuestion = ref({
     id: 0,
@@ -78,6 +88,8 @@ function HandleChange(opt_id: string, question_id: number) {
 }
 
 async function HandleAnswer() {
+    loading.value = true;
+
     if (currentQuestion.value.selected == "") {
         status.value = "Bitte wähle eine Antwort aus!"
         return;
@@ -97,6 +109,8 @@ async function HandleAnswer() {
             answer: currentQuestion.value.selected
         })
     }).then(res => res.json()).catch(err => console.error(err)) as ResType;
+
+    loading.value = false;
 
     if (res.correct) {
         status.value = "Richtig!"

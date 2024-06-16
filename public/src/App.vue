@@ -1,6 +1,7 @@
 <template>
     <div class="reveal !hidden lg:!block">
         <div class="slides">
+            <Quiz />
             <Intro />
             <Agile />
             <ClassicAgile />
@@ -11,7 +12,6 @@
             <Custom />
             <Efficiency />
             <End />
-            <Quiz />
         </div>
     </div>
     <p class="lg:hidden text-5xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-max text-white">Nutze den Laptop!</p>

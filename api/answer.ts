@@ -1,4 +1,4 @@
-import data from '../data/questions.json'
+import data from './data.js'
 
 export async function POST(req: Request, res: Response) {
     const body = await req.json()
