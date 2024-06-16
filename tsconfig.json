@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "lib": ["ES2017", "dom"],
+        "lib": ["ES2022", "dom"],
         "paths": {
             "@/*": ["./public/*"],
         },
